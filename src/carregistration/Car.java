@@ -17,6 +17,11 @@ public class Car {
     private double mileage;
     private double price;
     private int phone;
+
+    @Override
+    public String toString() {
+        return "Car{" + "brand=" + brand + ", model=" + model + ", year=" + year + ", color=" + color + ", mileage=" + mileage + ", price=" + price + ", phone=" + phone + '}';
+    }
     
   
    

@@ -215,7 +215,7 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
            
            
            cars.add(c);
-           System.out.println(c);
+           System.out.println(c.toString());
          }
     }//GEN-LAST:event_ButtonAddActionPerformed
 
