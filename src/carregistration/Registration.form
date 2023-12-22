@@ -65,7 +65,7 @@
                               <Component id="LabelPrice" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="TextFieldYear" pref="449" max="32767" attributes="0"/>
@@ -79,15 +79,15 @@
                                   </Group>
                                   <Component id="ButtonAdd" alignment="1" min="-2" pref="113" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="TextFieldPrice" pref="372" max="32767" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="TextFieldPrice" min="-2" pref="374" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Component id="ComboBoxCurrency" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <EmptySpace pref="21" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -101,7 +101,6 @@
                       <Component id="TextFieldBrand" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                       <Component id="LabelBrand" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
@@ -125,22 +124,23 @@
                       <Component id="TextFieldMileage" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                       <Component id="LabelMileage" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="TextFieldPhone" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="LabelPhone" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="TextFieldPrice" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="LabelPrice" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBoxCurrency" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                          <Component id="LabelPhone" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                          <Component id="TextFieldPrice" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                          <Component id="LabelPrice" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ComboBoxCurrency" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                          <Component id="TextFieldPhone" min="-2" pref="33" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="16" max="32767" attributes="0"/>
+                  <EmptySpace pref="17" max="32767" attributes="0"/>
                   <Component id="ButtonAdd" min="-2" pref="50" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
               </Group>
