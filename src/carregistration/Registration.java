@@ -7,8 +7,15 @@ package carregistration;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
+import java.nio.file.attribute.BasicFileAttributeView;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JFileChooser;
 
 /**
  *
@@ -34,6 +41,7 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jFileChooser1 = new javax.swing.JFileChooser();
         jPanel1 = new javax.swing.JPanel();
         LabelInfo = new javax.swing.JLabel();
         LabelBrand = new javax.swing.JLabel();
@@ -50,8 +58,10 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
         TextFieldMileage = new javax.swing.JTextField();
         TextFieldPrice = new javax.swing.JTextField();
         TextFieldPhone = new javax.swing.JTextField();
-        ComboBoxCurrency = new javax.swing.JComboBox<>();
+        LabelPhoto = new javax.swing.JLabel();
         ButtonAdd = new javax.swing.JButton();
+        LabelCarImage = new javax.swing.JLabel();
+        ButtonAttach = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(30000, 30000));
@@ -98,12 +108,25 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
             }
         });
 
-        ComboBoxCurrency.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ЛВ.", "EUR", " " }));
+        LabelPhoto.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        LabelPhoto.setText("Image:");
 
+        ButtonAdd.setBackground(new java.awt.Color(21, 127, 160));
+        ButtonAdd.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        ButtonAdd.setForeground(new java.awt.Color(255, 255, 255));
         ButtonAdd.setText("Add");
         ButtonAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonAddActionPerformed(evt);
+            }
+        });
+
+        LabelCarImage.setBackground(new java.awt.Color(255, 255, 255));
+
+        ButtonAttach.setText("Attach");
+        ButtonAttach.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonAttachActionPerformed(evt);
             }
         });
 
@@ -114,7 +137,9 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(13, 13, 13)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LabelInfo)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(LabelInfo)
+                        .addGap(76, 76, 76))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(LabelMileage)
@@ -122,35 +147,36 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
                             .addComponent(LabelModel, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(LabelYear, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(LabelColor, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(LabelPrice, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(LabelPhone, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(LabelPrice, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(TextFieldYear, javax.swing.GroupLayout.DEFAULT_SIZE, 449, Short.MAX_VALUE)
-                                    .addComponent(TextFieldModel)
-                                    .addComponent(TextFieldBrand))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(TextFieldColor)
-                                    .addComponent(TextFieldPhone)
-                                    .addComponent(TextFieldMileage, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(TextFieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(ComboBoxCurrency, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(21, Short.MAX_VALUE))
+                            .addComponent(LabelPhoto, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(TextFieldPhone)
+                                .addComponent(TextFieldPrice)
+                                .addComponent(TextFieldMileage)
+                                .addComponent(TextFieldColor)
+                                .addComponent(TextFieldYear)
+                                .addComponent(TextFieldModel)
+                                .addComponent(TextFieldBrand)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 34, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(LabelInfo)
-                .addGap(29, 29, 29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TextFieldBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LabelBrand))
+                .addGap(8, 8, 8)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(39, 39, 39)
@@ -173,59 +199,86 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(TextFieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(LabelPrice)
-                            .addComponent(ComboBoxCurrency, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(7, 7, 7)
-                        .addComponent(LabelPhone))
+                            .addComponent(LabelPrice)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(51, 51, 51)
-                        .addComponent(TextFieldPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
-                .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(LabelPhone)
+                            .addComponent(TextFieldPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LabelPhoto)
+                    .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void ButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAddActionPerformed
-       if(evt.getSource()==ButtonAdd){
-    
-           Car c = new Car();
-           c.setBrand(TextFieldBrand.getText());
-           c.setModel(TextFieldModel.getText());
-           c.setYear(Integer.valueOf(TextFieldYear.getText()));
-           c.setColor(TextFieldColor.getText());
-           c.setMileage(Double.valueOf(TextFieldMileage.getText()));
-           c.setPrice(Double.valueOf(TextFieldPrice.getText()));
-           c.setPhone(Integer.valueOf(TextFieldPhone.getText()));
-           
-           
-           cars.add(c);
-           System.out.println(c.toString());
-         }
+        if(evt.getSource()==ButtonAdd){
+
+            Car c = new Car();
+            c.setBrand(TextFieldBrand.getText());
+            c.setModel(TextFieldModel.getText());
+            c.setYear(Integer.valueOf(TextFieldYear.getText()));
+            c.setColor(TextFieldColor.getText());
+            c.setMileage(Double.valueOf(TextFieldMileage.getText()));
+            c.setPrice(Double.valueOf(TextFieldPrice.getText()));
+            c.setPhone(Integer.valueOf(TextFieldPhone.getText()));
+            c.setImageName(LabelCarImage.getText());
+            
+
+            cars.add(c);
+            System.out.println(c.toString());
+        }
+        
+       
     }//GEN-LAST:event_ButtonAddActionPerformed
+
+    private void TextFieldPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldPhoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldPhoneActionPerformed
 
     private void TextFieldYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldYearActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TextFieldYearActionPerformed
 
-    private void TextFieldPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldPhoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextFieldPhoneActionPerformed
+    private void ButtonAttachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAttachActionPerformed
+       JFileChooser chooser = new JFileChooser();
+        chooser.showOpenDialog(null);
+        File sourceFile = chooser.getSelectedFile();
+        String sourceImagePath = sourceFile.getAbsolutePath();
+        
+        
+        Path sourcePath = sourceFile.toPath();
+        Path targetPath = Path.of(System.getProperty("user.dir"), "CarShopImages", sourcePath.getFileName().toString());
+        LabelCarImage.setText(sourcePath.getFileName().toString());
+        try{
+            Files.createDirectories(targetPath.getParent());
+         Files.copy(sourcePath, targetPath, StandardCopyOption.REPLACE_EXISTING);   
+        } catch(IOException ioe){
+            throw new RuntimeException("cannot copy image file", ioe);
+        }
+    }//GEN-LAST:event_ButtonAttachActionPerformed
 
     /**
      * @param args the command line arguments
@@ -264,13 +317,15 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonAdd;
-    private javax.swing.JComboBox<String> ComboBoxCurrency;
+    private javax.swing.JButton ButtonAttach;
     private javax.swing.JLabel LabelBrand;
+    private javax.swing.JLabel LabelCarImage;
     private javax.swing.JLabel LabelColor;
     private javax.swing.JLabel LabelInfo;
     private javax.swing.JLabel LabelMileage;
     private javax.swing.JLabel LabelModel;
     private javax.swing.JLabel LabelPhone;
+    private javax.swing.JLabel LabelPhoto;
     private javax.swing.JLabel LabelPrice;
     private javax.swing.JLabel LabelYear;
     private javax.swing.JTextField TextFieldBrand;
@@ -280,6 +335,7 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JTextField TextFieldPhone;
     private javax.swing.JTextField TextFieldPrice;
     private javax.swing.JTextField TextFieldYear;
+    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 
