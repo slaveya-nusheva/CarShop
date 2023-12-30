@@ -5,6 +5,8 @@
  */
 package carregistration;
 
+import java.awt.image.BufferedImage;
+
 /**
  *
  * @author smgOP682
@@ -17,6 +19,7 @@ public class Car {
     private double mileage;
     private double price;
     private int phone;
+    private String imageName;
 
     @Override
     public String toString() {
@@ -81,5 +84,15 @@ public class Car {
     public void setPhone(int phone) {
         this.phone = phone;
     }
+
+    public String getImageName() {
+        return imageName;
+    }
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
+
     
-}
+ }
+    
