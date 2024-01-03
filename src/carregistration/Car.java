@@ -18,7 +18,7 @@ public class Car {
     private String color;
     private double mileage;
     private double price;
-    private int phone;
+    private String phone;
     private String imageName;
 
     @Override
@@ -77,11 +77,11 @@ public class Car {
         this.price = price;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
