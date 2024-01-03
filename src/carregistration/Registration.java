@@ -42,7 +42,7 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
     private void initComponents() {
 
         jFileChooser1 = new javax.swing.JFileChooser();
-        jPanel1 = new javax.swing.JPanel();
+        SellPanel = new javax.swing.JPanel();
         LabelInfo = new javax.swing.JLabel();
         LabelBrand = new javax.swing.JLabel();
         LabelModel = new javax.swing.JLabel();
@@ -64,17 +64,17 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
         ButtonAttach = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        MenuSell = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(30000, 30000));
 
-        jPanel1.setBackground(new java.awt.Color(175, 214, 236));
-        jPanel1.setToolTipText("");
+        SellPanel.setBackground(new java.awt.Color(175, 214, 236));
+        SellPanel.setToolTipText("");
 
-        LabelInfo.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        LabelInfo.setFont(new java.awt.Font("Lucida Grande", 0, 17)); // NOI18N
         LabelInfo.setText("Please enter the car's data.");
         LabelInfo.setToolTipText("");
 
@@ -135,18 +135,15 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(LabelInfo)
-                        .addGap(76, 76, 76))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout SellPanelLayout = new javax.swing.GroupLayout(SellPanel);
+        SellPanel.setLayout(SellPanelLayout);
+        SellPanelLayout.setHorizontalGroup(
+            SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SellPanelLayout.createSequentialGroup()
+                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SellPanelLayout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(LabelMileage)
                             .addComponent(LabelBrand, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(LabelModel, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -156,9 +153,9 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
                             .addComponent(LabelPhone, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(LabelPhoto, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(TextFieldPhone)
                                 .addComponent(TextFieldPrice)
                                 .addComponent(TextFieldMileage)
@@ -166,52 +163,55 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
                                 .addComponent(TextFieldYear)
                                 .addComponent(TextFieldModel)
                                 .addComponent(TextFieldBrand)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(SellPanelLayout.createSequentialGroup()
                                     .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 34, Short.MAX_VALUE))))
+                                    .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(SellPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(LabelInfo)))
+                .addGap(0, 34, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, 0)
+        SellPanelLayout.setVerticalGroup(
+            SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SellPanelLayout.createSequentialGroup()
+                .addGap(5, 5, 5)
                 .addComponent(LabelInfo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TextFieldBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LabelBrand))
                 .addGap(8, 8, 8)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SellPanelLayout.createSequentialGroup()
                         .addGap(39, 39, 39)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(TextFieldYear, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(LabelYear)))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(TextFieldModel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(LabelModel)))
                 .addGap(5, 5, 5)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LabelColor)
                     .addComponent(TextFieldColor, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(7, 7, 7)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TextFieldMileage, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LabelMileage))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SellPanelLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(TextFieldPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(LabelPrice)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(SellPanelLayout.createSequentialGroup()
                         .addGap(51, 51, 51)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(LabelPhone)
                             .addComponent(TextFieldPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LabelPhoto)
                     .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -228,8 +228,13 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
         });
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Sell a Car");
-        jMenuBar1.add(jMenu2);
+        MenuSell.setText("Sell a Car");
+        MenuSell.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuSellActionPerformed(evt);
+            }
+        });
+        jMenuBar1.add(MenuSell);
 
         jMenu3.setText("About Us");
         jMenuBar1.add(jMenu3);
@@ -244,12 +249,12 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(SellPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(SellPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -303,8 +308,14 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
     }//GEN-LAST:event_ButtonAttachActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
-        
+        // TODO add your handling code here:
     }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void MenuSellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuSellActionPerformed
+        if(evt.getSource()==MenuSell){
+            SellPanel.setVisible(true);
+        }
+    }//GEN-LAST:event_MenuSellActionPerformed
 
     /**
      * @param args the command line arguments
@@ -335,7 +346,7 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+           public void run() {
                 new Registration().setVisible(true);
             }
         });
@@ -354,6 +365,8 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JLabel LabelPhoto;
     private javax.swing.JLabel LabelPrice;
     private javax.swing.JLabel LabelYear;
+    private javax.swing.JMenu MenuSell;
+    private javax.swing.JPanel SellPanel;
     private javax.swing.JTextField TextFieldBrand;
     private javax.swing.JTextField TextFieldColor;
     private javax.swing.JTextField TextFieldMileage;
@@ -363,11 +376,9 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JTextField TextFieldYear;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 
     @Override
