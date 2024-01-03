@@ -62,11 +62,12 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
         ButtonAdd = new javax.swing.JButton();
         LabelCarImage = new javax.swing.JLabel();
         ButtonAttach = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        BuyPanel = new javax.swing.JPanel();
+        MenuBar = new javax.swing.JMenuBar();
+        MenuBuy = new javax.swing.JMenu();
         MenuSell = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
+        MenuInfo = new javax.swing.JMenu();
+        MenuAutohouses = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(30000, 30000));
@@ -220,13 +221,26 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
                 .addGap(43, 43, 43))
         );
 
-        jMenu1.setText("Buy a Car");
-        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+        BuyPanel.setForeground(new java.awt.Color(175, 214, 236));
+
+        javax.swing.GroupLayout BuyPanelLayout = new javax.swing.GroupLayout(BuyPanel);
+        BuyPanel.setLayout(BuyPanelLayout);
+        BuyPanelLayout.setHorizontalGroup(
+            BuyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 588, Short.MAX_VALUE)
+        );
+        BuyPanelLayout.setVerticalGroup(
+            BuyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 491, Short.MAX_VALUE)
+        );
+
+        MenuBuy.setText("Buy a Car");
+        MenuBuy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu1ActionPerformed(evt);
+                MenuBuyActionPerformed(evt);
             }
         });
-        jMenuBar1.add(jMenu1);
+        MenuBar.add(MenuBuy);
 
         MenuSell.setText("Sell a Car");
         MenuSell.addActionListener(new java.awt.event.ActionListener() {
@@ -234,15 +248,15 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
                 MenuSellActionPerformed(evt);
             }
         });
-        jMenuBar1.add(MenuSell);
+        MenuBar.add(MenuSell);
 
-        jMenu3.setText("About Us");
-        jMenuBar1.add(jMenu3);
+        MenuInfo.setText("About Us");
+        MenuBar.add(MenuInfo);
 
-        jMenu4.setText("Autohouses");
-        jMenuBar1.add(jMenu4);
+        MenuAutohouses.setText("Autohouses");
+        MenuBar.add(MenuAutohouses);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(MenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -251,10 +265,14 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
             .addGroup(layout.createSequentialGroup()
                 .addComponent(SellPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(BuyPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(SellPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(BuyPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -307,9 +325,9 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
         }
     }//GEN-LAST:event_ButtonAttachActionPerformed
 
-    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+    private void MenuBuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuBuyActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu1ActionPerformed
+    }//GEN-LAST:event_MenuBuyActionPerformed
 
     private void MenuSellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuSellActionPerformed
         if(evt.getSource()==MenuSell){
@@ -355,6 +373,7 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonAdd;
     private javax.swing.JButton ButtonAttach;
+    private javax.swing.JPanel BuyPanel;
     private javax.swing.JLabel LabelBrand;
     private javax.swing.JLabel LabelCarImage;
     private javax.swing.JLabel LabelColor;
@@ -365,6 +384,10 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JLabel LabelPhoto;
     private javax.swing.JLabel LabelPrice;
     private javax.swing.JLabel LabelYear;
+    private javax.swing.JMenu MenuAutohouses;
+    private javax.swing.JMenuBar MenuBar;
+    private javax.swing.JMenu MenuBuy;
+    private javax.swing.JMenu MenuInfo;
     private javax.swing.JMenu MenuSell;
     private javax.swing.JPanel SellPanel;
     private javax.swing.JTextField TextFieldBrand;
@@ -375,10 +398,6 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JTextField TextFieldPrice;
     private javax.swing.JTextField TextFieldYear;
     private javax.swing.JFileChooser jFileChooser1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 
     @Override
