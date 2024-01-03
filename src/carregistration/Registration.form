@@ -11,6 +11,7 @@
             <Property name="text" type="java.lang.String" value="Buy a Car"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MenuBuyMouseClicked"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuBuyActionPerformed"/>
           </Events>
         </Menu>
@@ -19,6 +20,7 @@
             <Property name="text" type="java.lang.String" value="Sell a Car"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MenuSellMouseClicked"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MenuSellActionPerformed"/>
           </Events>
         </Menu>

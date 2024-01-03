@@ -235,6 +235,11 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
         );
 
         MenuBuy.setText("Buy a Car");
+        MenuBuy.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MenuBuyMouseClicked(evt);
+            }
+        });
         MenuBuy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuBuyActionPerformed(evt);
@@ -243,6 +248,11 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
         MenuBar.add(MenuBuy);
 
         MenuSell.setText("Sell a Car");
+        MenuSell.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MenuSellMouseClicked(evt);
+            }
+        });
         MenuSell.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuSellActionPerformed(evt);
@@ -334,6 +344,16 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
             SellPanel.setVisible(true);
         }
     }//GEN-LAST:event_MenuSellActionPerformed
+
+    private void MenuBuyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuBuyMouseClicked
+       BuyPanel.setVisible(true);
+       SellPanel.setVisible(false);
+    }//GEN-LAST:event_MenuBuyMouseClicked
+
+    private void MenuSellMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuSellMouseClicked
+         BuyPanel.setVisible(false);
+       SellPanel.setVisible(true);
+    }//GEN-LAST:event_MenuSellMouseClicked
 
     /**
      * @param args the command line arguments
