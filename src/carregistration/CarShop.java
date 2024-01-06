@@ -22,12 +22,12 @@ import javax.swing.JPanel;
  *
  * @author smgOP682
  */
-public class Registration extends javax.swing.JFrame implements ActionListener{
+public class CarShop extends javax.swing.JFrame implements ActionListener{
      public List<Car> cars;
     /**
      * Creates new form Registration
      */
-    public Registration() {
+    public CarShop() {
         initComponents();
         cars = new ArrayList<>();
        
@@ -378,20 +378,21 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Registration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CarShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Registration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CarShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Registration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CarShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Registration.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CarShop.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
            public void run() {
-                new Registration().setVisible(true);
+                new CarShop().setVisible(true);
             }
         });
     }
