@@ -5,6 +5,8 @@
  */
 package carregistration;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author smgOP682
@@ -27,19 +29,167 @@ public class CarDisplay extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        LabelListPic = new javax.swing.JLabel();
+        LabelListBrand = new javax.swing.JLabel();
+        LabelListModel = new javax.swing.JLabel();
+        LabelListYear = new javax.swing.JLabel();
+        LabelListColor = new javax.swing.JLabel();
+        LabelListMileage = new javax.swing.JLabel();
+        LabelListPhone = new javax.swing.JLabel();
+        LabelListPrice = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(245, 245, 245));
+        setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        LabelListBrand.setFont(new java.awt.Font("Helvetica Neue", 0, 16)); // NOI18N
+        LabelListBrand.setText("Brand");
+
+        LabelListModel.setFont(new java.awt.Font("Helvetica Neue", 0, 16)); // NOI18N
+        LabelListModel.setText("Model");
+
+        LabelListYear.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        LabelListYear.setText("Year");
+
+        LabelListColor.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        LabelListColor.setText("Color");
+
+        LabelListMileage.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        LabelListMileage.setText("Mileage");
+
+        LabelListPhone.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        LabelListPhone.setText("Phone");
+
+        LabelListPrice.setFont(new java.awt.Font("Helvetica Neue", 0, 17)); // NOI18N
+        LabelListPrice.setText("Price");
+        LabelListPrice.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(53, 124, 195), 1, true));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 584, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(LabelListPic, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(LabelListBrand)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(LabelListModel))
+                            .addComponent(LabelListYear)
+                            .addComponent(LabelListColor)
+                            .addComponent(LabelListMileage))
+                        .addContainerGap(214, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(LabelListPhone)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(LabelListPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 156, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(LabelListBrand)
+                            .addComponent(LabelListModel))
+                        .addGap(18, 18, 18)
+                        .addComponent(LabelListYear)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(LabelListColor)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(LabelListMileage)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LabelListPhone, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(LabelListPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(9, 9, 9))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(LabelListPic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LabelListBrand;
+    private javax.swing.JLabel LabelListColor;
+    private javax.swing.JLabel LabelListMileage;
+    private javax.swing.JLabel LabelListModel;
+    private javax.swing.JLabel LabelListPhone;
+    private javax.swing.JLabel LabelListPic;
+    private javax.swing.JLabel LabelListPrice;
+    private javax.swing.JLabel LabelListYear;
     // End of variables declaration//GEN-END:variables
+
+    public JLabel getLabelListBrand() {
+        return LabelListBrand;
+    }
+
+    public void setLabelListBrand(JLabel LabelListBrand) {
+        this.LabelListBrand = LabelListBrand;
+    }
+
+    public JLabel getLabelListColor() {
+        return LabelListColor;
+    }
+
+    public void setLabelListColor(JLabel LabelListColor) {
+        this.LabelListColor = LabelListColor;
+    }
+
+    public JLabel getLabelListMileage() {
+        return LabelListMileage;
+    }
+
+    public void setLabelListMileage(JLabel LabelListMileage) {
+        this.LabelListMileage = LabelListMileage;
+    }
+
+    public JLabel getLabelListModel() {
+        return LabelListModel;
+    }
+
+    public void setLabelListModel(JLabel LabelListModel) {
+        this.LabelListModel = LabelListModel;
+    }
+
+    public JLabel getLabelListPhone() {
+        return LabelListPhone;
+    }
+
+    public void setLabelListPhone(JLabel LabelListPhone) {
+        this.LabelListPhone = LabelListPhone;
+    }
+
+    public JLabel getLabelListPic() {
+        return LabelListPic;
+    }
+
+    public void setLabelListPic(JLabel LabelListPic) {
+        this.LabelListPic = LabelListPic;
+    }
+
+    public JLabel getLabelListPrice() {
+        return LabelListPrice;
+    }
+
+    public void setLabelListPrice(JLabel LabelListPrice) {
+        this.LabelListPrice = LabelListPrice;
+    }
+
+    public JLabel getLabelListYear() {
+        return LabelListYear;
+    }
+
+    public void setLabelListYear(JLabel LabelListYear) {
+        this.LabelListYear = LabelListYear;
+    }
+
+
 }
