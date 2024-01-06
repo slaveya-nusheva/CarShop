@@ -16,6 +16,7 @@ import java.nio.file.attribute.BasicFileAttributeView;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JFileChooser;
+import javax.swing.JPanel;
 
 /**
  *
@@ -304,6 +305,11 @@ public class Registration extends javax.swing.JFrame implements ActionListener{
 
             cars.add(c);
             System.out.println(c.toString());
+            
+            
+            JPanel jp = new CarDisplay();
+            //setLabelListBrand(c.getBrandr());
+            BuyPanel.add(jp);
         }
         
        
