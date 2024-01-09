@@ -6,6 +6,7 @@
 package carregistration;
 
 import java.awt.LayoutManager;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 /**
@@ -24,7 +25,7 @@ public class CarDisplay extends javax.swing.JPanel {
         LabelListMileage.setText(String.valueOf(car.getMileage()));
         LabelListModel.setText(car.getModel());
         LabelListPhone.setText(car.getPhone());
-        LabelListPic.setText(car.getImageName());
+        LabelListPic.setIcon(new ImageIcon(car.getImageName()));
         LabelListPrice.setText(String.valueOf(car.getPrice()));
         LabelListYear.setText(String.valueOf(car.getYear()));
     }
