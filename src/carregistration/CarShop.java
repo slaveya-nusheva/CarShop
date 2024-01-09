@@ -75,7 +75,7 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
 
         SellPanel.setBackground(new java.awt.Color(175, 214, 236));
         SellPanel.setToolTipText("");
-        SellPanel.setPreferredSize(new java.awt.Dimension(588, 501));
+        SellPanel.setPreferredSize(new java.awt.Dimension(588, 511));
 
         LabelInfo.setFont(new java.awt.Font("Lucida Grande", 0, 17)); // NOI18N
         LabelInfo.setText("Please enter the car's data.");
@@ -218,13 +218,13 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
                     .addComponent(LabelPhoto)
                     .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43))
         );
 
-        BuyPanel.setForeground(new java.awt.Color(175, 214, 236));
-        BuyPanel.setPreferredSize(new java.awt.Dimension(588, 501));
+        BuyPanel.setBackground(new java.awt.Color(175, 214, 236));
+        BuyPanel.setPreferredSize(new java.awt.Dimension(588, 511));
 
         javax.swing.GroupLayout BuyPanelLayout = new javax.swing.GroupLayout(BuyPanel);
         BuyPanel.setLayout(BuyPanelLayout);
@@ -234,7 +234,7 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
         );
         BuyPanelLayout.setVerticalGroup(
             BuyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 501, Short.MAX_VALUE)
+            .addGap(0, 511, Short.MAX_VALUE)
         );
 
         MenuBuy.setText("Buy a Car");
