@@ -5,6 +5,7 @@
  */
 package carregistration;
 
+import java.awt.LayoutManager;
 import javax.swing.JLabel;
 
 /**
@@ -16,8 +17,16 @@ public class CarDisplay extends javax.swing.JPanel {
     /**
      * Creates new form CarDisplay
      */
-    public CarDisplay() {
+    public CarDisplay(Car car) {
         initComponents();
+        LabelListBrand.setText(car.getBrandr());
+        LabelListColor.setText(car.getColor());
+        LabelListMileage.setText(String.valueOf(car.getMileage()));
+        LabelListModel.setText(car.getModel());
+        LabelListPhone.setText(car.getPhone());
+        LabelListPic.setText(car.getImageName());
+        LabelListPrice.setText(String.valueOf(car.getPrice()));
+        LabelListYear.setText(String.valueOf(car.getYear()));
     }
 
     /**
@@ -40,6 +49,7 @@ public class CarDisplay extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(245, 245, 245));
         setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        setPreferredSize(new java.awt.Dimension(588, 179));
 
         LabelListBrand.setFont(new java.awt.Font("Helvetica Neue", 0, 16)); // NOI18N
         LabelListBrand.setText("Brand");
@@ -61,7 +71,7 @@ public class CarDisplay extends javax.swing.JPanel {
 
         LabelListPrice.setFont(new java.awt.Font("Helvetica Neue", 0, 17)); // NOI18N
         LabelListPrice.setText("Price");
-        LabelListPrice.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(53, 124, 195), 1, true));
+        LabelListPrice.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(36, 96, 156), 1, true));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -127,69 +137,5 @@ public class CarDisplay extends javax.swing.JPanel {
     private javax.swing.JLabel LabelListYear;
     // End of variables declaration//GEN-END:variables
 
-    public JLabel getLabelListBrand() {
-        return LabelListBrand;
-    }
-
-    public void setLabelListBrand(JLabel LabelListBrand) {
-        this.LabelListBrand = LabelListBrand;
-    }
-
-    public JLabel getLabelListColor() {
-        return LabelListColor;
-    }
-
-    public void setLabelListColor(JLabel LabelListColor) {
-        this.LabelListColor = LabelListColor;
-    }
-
-    public JLabel getLabelListMileage() {
-        return LabelListMileage;
-    }
-
-    public void setLabelListMileage(JLabel LabelListMileage) {
-        this.LabelListMileage = LabelListMileage;
-    }
-
-    public JLabel getLabelListModel() {
-        return LabelListModel;
-    }
-
-    public void setLabelListModel(JLabel LabelListModel) {
-        this.LabelListModel = LabelListModel;
-    }
-
-    public JLabel getLabelListPhone() {
-        return LabelListPhone;
-    }
-
-    public void setLabelListPhone(JLabel LabelListPhone) {
-        this.LabelListPhone = LabelListPhone;
-    }
-
-    public JLabel getLabelListPic() {
-        return LabelListPic;
-    }
-
-    public void setLabelListPic(JLabel LabelListPic) {
-        this.LabelListPic = LabelListPic;
-    }
-
-    public JLabel getLabelListPrice() {
-        return LabelListPrice;
-    }
-
-    public void setLabelListPrice(JLabel LabelListPrice) {
-        this.LabelListPrice = LabelListPrice;
-    }
-
-    public JLabel getLabelListYear() {
-        return LabelListYear;
-    }
-
-    public void setLabelListYear(JLabel LabelListYear) {
-        this.LabelListYear = LabelListYear;
-    }
-
-
+    
 }
