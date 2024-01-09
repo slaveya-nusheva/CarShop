@@ -75,6 +75,7 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
 
         SellPanel.setBackground(new java.awt.Color(175, 214, 236));
         SellPanel.setToolTipText("");
+        SellPanel.setPreferredSize(new java.awt.Dimension(588, 501));
 
         LabelInfo.setFont(new java.awt.Font("Lucida Grande", 0, 17)); // NOI18N
         LabelInfo.setText("Please enter the car's data.");
@@ -217,12 +218,13 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
                     .addComponent(LabelPhoto)
                     .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(43, 43, 43))
         );
 
         BuyPanel.setForeground(new java.awt.Color(175, 214, 236));
+        BuyPanel.setPreferredSize(new java.awt.Dimension(588, 501));
 
         javax.swing.GroupLayout BuyPanelLayout = new javax.swing.GroupLayout(BuyPanel);
         BuyPanel.setLayout(BuyPanelLayout);
@@ -232,7 +234,7 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
         );
         BuyPanelLayout.setVerticalGroup(
             BuyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 491, Short.MAX_VALUE)
+            .addGap(0, 501, Short.MAX_VALUE)
         );
 
         MenuBuy.setText("Buy a Car");
@@ -306,10 +308,6 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
             cars.add(c);
             System.out.println(c.toString());
             
-            
-            JPanel jp = new CarDisplay();
-            //setLabelListBrand(c.getBrandr());
-            BuyPanel.add(jp);
         }
         
        
@@ -352,7 +350,15 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
     }//GEN-LAST:event_MenuSellActionPerformed
 
     private void MenuBuyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuBuyMouseClicked
-       BuyPanel.setVisible(true);
+       int x=10;
+       int y=10;
+        for(Car car:cars){
+           CarDisplay display= new CarDisplay(car);
+           display.setBounds(x,y, 588,179);
+           BuyPanel.add(display);
+           y+=179;           
+       }
+        BuyPanel.setVisible(true);
        SellPanel.setVisible(false);
     }//GEN-LAST:event_MenuBuyMouseClicked
 
