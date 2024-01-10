@@ -8,13 +8,18 @@ package carregistration;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.BasicFileAttributeView;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JPanel;
 
@@ -61,8 +66,9 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
         TextFieldPhone = new javax.swing.JTextField();
         LabelPhoto = new javax.swing.JLabel();
         ButtonAdd = new javax.swing.JButton();
-        LabelCarImage = new javax.swing.JLabel();
         ButtonAttach = new javax.swing.JButton();
+        LabelCarImage = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         BuyPanel = new javax.swing.JPanel();
         MenuBar = new javax.swing.JMenuBar();
         MenuBuy = new javax.swing.JMenu();
@@ -75,7 +81,7 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
 
         SellPanel.setBackground(new java.awt.Color(175, 214, 236));
         SellPanel.setToolTipText("");
-        SellPanel.setPreferredSize(new java.awt.Dimension(588, 511));
+        SellPanel.setPreferredSize(new java.awt.Dimension(610, 511));
 
         LabelInfo.setFont(new java.awt.Font("Lucida Grande", 0, 17)); // NOI18N
         LabelInfo.setText("Please enter the car's data.");
@@ -129,8 +135,6 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
             }
         });
 
-        LabelCarImage.setBackground(new java.awt.Color(255, 255, 255));
-
         ButtonAttach.setText("Attach");
         ButtonAttach.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,12 +142,17 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
             }
         });
 
+        jLabel1.setForeground(new java.awt.Color(175, 214, 236));
+
         javax.swing.GroupLayout SellPanelLayout = new javax.swing.GroupLayout(SellPanel);
         SellPanel.setLayout(SellPanelLayout);
         SellPanelLayout.setHorizontalGroup(
             SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SellPanelLayout.createSequentialGroup()
                 .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SellPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(LabelInfo))
                     .addGroup(SellPanelLayout.createSequentialGroup()
                         .addGap(13, 13, 13)
                         .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,23 +166,29 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
                             .addComponent(LabelPhoto, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(TextFieldPhone)
-                                .addComponent(TextFieldPrice)
-                                .addComponent(TextFieldMileage)
-                                .addComponent(TextFieldColor)
-                                .addComponent(TextFieldYear)
-                                .addComponent(TextFieldModel)
-                                .addComponent(TextFieldBrand)
-                                .addGroup(SellPanelLayout.createSequentialGroup()
-                                    .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(SellPanelLayout.createSequentialGroup()
+                            .addGroup(SellPanelLayout.createSequentialGroup()
+                                .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(SellPanelLayout.createSequentialGroup()
+                                        .addGap(267, 267, 267)
+                                        .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SellPanelLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel1)
+                                        .addGap(94, 94, 94))))
+                            .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(TextFieldPhone, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 527, Short.MAX_VALUE)
+                                .addComponent(TextFieldPrice, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(TextFieldMileage, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(TextFieldColor, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(TextFieldYear, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(TextFieldModel, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(TextFieldBrand, javax.swing.GroupLayout.Alignment.LEADING))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SellPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(LabelInfo)))
-                .addGap(0, 34, Short.MAX_VALUE))
+                        .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SellPanelLayout.setVerticalGroup(
             SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -216,21 +231,24 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LabelPhoto)
-                    .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
+                    .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(SellPanelLayout.createSequentialGroup()
+                        .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel1)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43))
+                .addGap(40, 40, 40))
         );
 
         BuyPanel.setBackground(new java.awt.Color(175, 214, 236));
-        BuyPanel.setPreferredSize(new java.awt.Dimension(588, 511));
+        BuyPanel.setPreferredSize(new java.awt.Dimension(610, 511));
 
         javax.swing.GroupLayout BuyPanelLayout = new javax.swing.GroupLayout(BuyPanel);
         BuyPanel.setLayout(BuyPanelLayout);
         BuyPanelLayout.setHorizontalGroup(
             BuyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 588, Short.MAX_VALUE)
+            .addGap(0, 610, Short.MAX_VALUE)
         );
         BuyPanelLayout.setVerticalGroup(
             BuyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -302,7 +320,7 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
             c.setMileage(Double.valueOf(TextFieldMileage.getText()));
             c.setPrice(Double.valueOf(TextFieldPrice.getText()));
             c.setPhone(TextFieldPhone.getText());
-            c.setImageName(LabelCarImage.getText());
+            c.setImageName(jLabel1.getText());
             
 
             cars.add(c);
@@ -322,21 +340,30 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
     }//GEN-LAST:event_TextFieldYearActionPerformed
 
     private void ButtonAttachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAttachActionPerformed
-       JFileChooser chooser = new JFileChooser();
-        chooser.showOpenDialog(null);
-        File sourceFile = chooser.getSelectedFile();
-        String sourceImagePath = sourceFile.getAbsolutePath();
-        
-        
-        Path sourcePath = sourceFile.toPath();
-        Path targetPath = Path.of(System.getProperty("user.dir"), "CarShopImages", sourcePath.getFileName().toString());
-        LabelCarImage.setText(sourcePath.getFileName().toString());
-        try{
-            Files.createDirectories(targetPath.getParent());
-         Files.copy(sourcePath, targetPath, StandardCopyOption.REPLACE_EXISTING);   
-        } catch(IOException ioe){
-            throw new RuntimeException("cannot copy image file", ioe);
-        }
+       JFileChooser fileChooser = new JFileChooser();
+       fileChooser.addChoosableFileFilter(new ImageFilter());
+       fileChooser.setAcceptAllFileFilterUsed(false);
+
+       int option = fileChooser.showOpenDialog(this);
+       if(option == JFileChooser.APPROVE_OPTION){
+          File file = fileChooser.getSelectedFile();
+          try {               
+               Path resourceDirectory = Paths.get("src","resources");
+               String absolutePath = resourceDirectory.toFile().getAbsolutePath();
+              
+               FileChannel src = new FileInputStream(file).getChannel();
+               FileChannel dest = new FileOutputStream(new File(absolutePath+"/"+file.getName())).getChannel();
+               dest.transferFrom(src, 0, src.size());
+               src.close();
+               dest.close();
+               ImageIcon imgIcon = new ImageIcon(absolutePath+"/"+file.getName());
+               LabelCarImage.setIcon(imgIcon);
+               LabelCarImage.setSize(imgIcon.getIconWidth(), imgIcon.getIconHeight());
+               jLabel1.setText(file.getName());
+           } catch (Exception ex) {
+               // TODO Auto-generated catch block
+               ex.printStackTrace();
+           }}
     }//GEN-LAST:event_ButtonAttachActionPerformed
 
     private void MenuBuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuBuyActionPerformed
@@ -356,7 +383,7 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
            CarDisplay display= new CarDisplay(car);
            display.setBounds(x,y, 588,179);
            BuyPanel.add(display);
-           y+=179;           
+           y+=189;           
        }
         BuyPanel.setVisible(true);
        SellPanel.setVisible(false);
@@ -431,6 +458,7 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JTextField TextFieldPrice;
     private javax.swing.JTextField TextFieldYear;
     private javax.swing.JFileChooser jFileChooser1;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
     @Override
