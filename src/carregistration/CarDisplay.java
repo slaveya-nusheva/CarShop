@@ -54,8 +54,8 @@ public class CarDisplay extends javax.swing.JPanel {
         LabelListPrice = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         ButtonDelete = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        km = new javax.swing.JLabel();
+        lv = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(234, 244, 247));
         setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -96,11 +96,11 @@ public class CarDisplay extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel1.setText("km");
+        km.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        km.setText("km");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
-        jLabel2.setText("лв.");
+        lv.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        lv.setText("лв.");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -118,7 +118,7 @@ public class CarDisplay extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(LabelListMileage)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel1)))
+                                .addComponent(km)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -138,7 +138,7 @@ public class CarDisplay extends javax.swing.JPanel {
                                 .addComponent(ButtonDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2)))))
+                                .addComponent(lv)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -159,7 +159,7 @@ public class CarDisplay extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(LabelListMileage)
-                                    .addComponent(jLabel1)))
+                                    .addComponent(km)))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(ButtonDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -169,7 +169,7 @@ public class CarDisplay extends javax.swing.JPanel {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(LabelListPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2))
+                                    .addComponent(lv))
                                 .addGap(10, 10, 10))))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
@@ -196,8 +196,8 @@ public class CarDisplay extends javax.swing.JPanel {
     private javax.swing.JLabel LabelListPrice;
     private javax.swing.JLabel LabelListYear;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel km;
+    private javax.swing.JLabel lv;
     // End of variables declaration//GEN-END:variables
 
     
