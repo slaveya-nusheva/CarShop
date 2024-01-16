@@ -29,6 +29,7 @@ import javax.swing.JPanel;
  */
 public class CarShop extends javax.swing.JFrame implements ActionListener{
      public List<Car> cars;
+     public Car currentCar;
     /**
      * Creates new form Registration
      */
@@ -83,6 +84,7 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
 
         SellPanel.setBackground(new java.awt.Color(175, 214, 236));
         SellPanel.setToolTipText("");
+        SellPanel.setMaximumSize(new java.awt.Dimension(610, 511));
         SellPanel.setPreferredSize(new java.awt.Dimension(610, 511));
 
         LabelInfo.setFont(new java.awt.Font("Lucida Grande", 0, 17)); // NOI18N
@@ -268,12 +270,13 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
         BuyPanel.setBackground(new java.awt.Color(175, 214, 236));
         BuyPanel.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         BuyPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        BuyPanel.setMaximumSize(new java.awt.Dimension(610, 511));
         BuyPanel.setPreferredSize(new java.awt.Dimension(610, 511));
         BuyPanel.setVerifyInputWhenFocusTarget(false);
 
         listPanel.setBackground(new java.awt.Color(175, 214, 236));
-        listPanel.setAutoscrolls(true);
         listPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        listPanel.setMaximumSize(new java.awt.Dimension(610, 511));
         listPanel.setPreferredSize(new java.awt.Dimension(610, 511));
 
         javax.swing.GroupLayout listPanelLayout = new javax.swing.GroupLayout(listPanel);
@@ -366,14 +369,15 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
             cars.add(c);
            // System.out.println(c.toString());
            
-           /* TextFieldBrand.setText(null);
+           TextFieldBrand.setText(null);
             TextFieldModel.setText(null);
             TextFieldYear.setText(null);
             TextFieldColor.setText(null);
             TextFieldMileage.setText(null);
             TextFieldPrice.setText(null);
             TextFieldPhone.setText(null);
-            jLabel1.setText(null); */
+            jLabel1.setText(null);
+           LabelCarImage.setIcon(null);
         }
         
        
@@ -428,7 +432,7 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
        int x=10;
        int y=10;
         for(Car car:cars){
-           CarDisplay display= new CarDisplay(car);
+           CarDisplay display = new CarDisplay(this, car);
            display.setBounds(x,y, 588,179);
            listPanel.add(display);
            y+=189;           
@@ -454,6 +458,7 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
             TextFieldPrice.setText(null);
             TextFieldPhone.setText(null);
             jLabel1.setText(null);
+            LabelCarImage.setIcon(null);
          }
     }//GEN-LAST:event_ButtonCancelActionPerformed
 
