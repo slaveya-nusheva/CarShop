@@ -9,6 +9,7 @@ import java.awt.LayoutManager;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 /**
@@ -20,7 +21,7 @@ public class CarDisplay extends javax.swing.JPanel {
     /**
      * Creates new form CarDisplay
      */
-    public CarDisplay(Car car) {
+    public CarDisplay(JFrame parent, Car car) {
         initComponents();
        Path resourceDirectory = Paths.get("src","resources");
         String absolutePath = resourceDirectory.toFile().getAbsolutePath();
@@ -88,6 +89,11 @@ public class CarDisplay extends javax.swing.JPanel {
         ButtonEdit.setText("Edit");
         ButtonEdit.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         ButtonEdit.setMinimumSize(new java.awt.Dimension(11, 11));
+        ButtonEdit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ButtonEditMouseClicked(evt);
+            }
+        });
         ButtonEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonEditActionPerformed(evt);
@@ -192,10 +198,14 @@ public class CarDisplay extends javax.swing.JPanel {
     }//GEN-LAST:event_ButtonDeleteActionPerformed
 
     private void ButtonEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonEditActionPerformed
-        if(evt.getSource()==ButtonEdit){
-       
-        }
+     
     }//GEN-LAST:event_ButtonEditActionPerformed
+
+    private void ButtonEditMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonEditMouseClicked
+          if(evt.getSource()==ButtonEdit){
+            
+        }
+    }//GEN-LAST:event_ButtonEditMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
