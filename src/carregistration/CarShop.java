@@ -152,9 +152,13 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
 
         jLabel1.setForeground(new java.awt.Color(175, 214, 236));
 
-        ButtonCancel.setBackground(new java.awt.Color(204, 0, 0));
-        ButtonCancel.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        ButtonCancel.setBackground(new java.awt.Color(230, 73, 73));
+        ButtonCancel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        ButtonCancel.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonCancel.setText("Cancel");
         ButtonCancel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ButtonCancel.setMaximumSize(new java.awt.Dimension(57, 27));
+        ButtonCancel.setMinimumSize(new java.awt.Dimension(57, 27));
         ButtonCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonCancelActionPerformed(evt);
@@ -166,60 +170,54 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
         SellPanelLayout.setHorizontalGroup(
             SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SellPanelLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(SellPanelLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(LabelInfo)
-                        .addGap(370, 370, 370)
-                        .addComponent(ButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(SellPanelLayout.createSequentialGroup()
-                            .addGap(13, 13, 13)
-                            .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(LabelMileage)
-                                .addComponent(LabelBrand, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(LabelModel, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(LabelYear, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(LabelColor, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(LabelPrice, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(LabelPhone, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(LabelPhoto, javax.swing.GroupLayout.Alignment.TRAILING))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(SellPanelLayout.createSequentialGroup()
-                                    .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(SellPanelLayout.createSequentialGroup()
-                                            .addGap(267, 267, 267)
-                                            .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SellPanelLayout.createSequentialGroup()
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jLabel1)
-                                            .addGap(94, 94, 94))))
-                                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(TextFieldPhone, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 527, Short.MAX_VALUE)
-                                    .addComponent(TextFieldPrice, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TextFieldMileage, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TextFieldColor, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TextFieldYear, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TextFieldModel, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TextFieldBrand, javax.swing.GroupLayout.Alignment.LEADING))))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SellPanelLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(30, 30, 30))))
+                        .addGap(388, 388, 388))
+                    .addGroup(SellPanelLayout.createSequentialGroup()
+                        .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(LabelMileage)
+                            .addComponent(LabelBrand, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(LabelModel, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(LabelYear, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(LabelColor, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(LabelPrice, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(LabelPhone, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(LabelPhoto, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(SellPanelLayout.createSequentialGroup()
+                                .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(SellPanelLayout.createSequentialGroup()
+                                        .addGap(267, 267, 267)
+                                        .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SellPanelLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel1)
+                                        .addGap(94, 94, 94))))
+                            .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(TextFieldPhone, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 527, Short.MAX_VALUE)
+                                .addComponent(TextFieldPrice, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(TextFieldMileage, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(TextFieldColor, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(TextFieldYear, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(TextFieldModel, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(TextFieldBrand, javax.swing.GroupLayout.Alignment.LEADING))))
+                    .addGroup(SellPanelLayout.createSequentialGroup()
+                        .addComponent(ButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)))
                 .addContainerGap(13, Short.MAX_VALUE))
         );
         SellPanelLayout.setVerticalGroup(
             SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SellPanelLayout.createSequentialGroup()
                 .addGap(5, 5, 5)
-                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LabelInfo)
-                    .addGroup(SellPanelLayout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(ButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(LabelInfo)
+                .addGap(11, 11, 11)
                 .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TextFieldBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LabelBrand))
@@ -261,16 +259,20 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
                         .addGap(10, 10, 10)
                         .addComponent(jLabel1)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40))
         );
 
         BuyPanel.setBackground(new java.awt.Color(175, 214, 236));
         BuyPanel.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        BuyPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         BuyPanel.setPreferredSize(new java.awt.Dimension(610, 511));
         BuyPanel.setVerifyInputWhenFocusTarget(false);
 
         listPanel.setBackground(new java.awt.Color(175, 214, 236));
+        listPanel.setAutoscrolls(true);
         listPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         listPanel.setPreferredSize(new java.awt.Dimension(610, 511));
 
@@ -362,8 +364,16 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
             
 
             cars.add(c);
-            System.out.println(c.toString());
-            
+           // System.out.println(c.toString());
+           
+           /* TextFieldBrand.setText(null);
+            TextFieldModel.setText(null);
+            TextFieldYear.setText(null);
+            TextFieldColor.setText(null);
+            TextFieldMileage.setText(null);
+            TextFieldPrice.setText(null);
+            TextFieldPhone.setText(null);
+            jLabel1.setText(null); */
         }
         
        
