@@ -52,7 +52,7 @@ public class CarDisplay extends javax.swing.JPanel {
         LabelListMileage = new javax.swing.JLabel();
         LabelListPhone = new javax.swing.JLabel();
         LabelListPrice = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        ButtonEdit = new javax.swing.JButton();
         ButtonDelete = new javax.swing.JButton();
         km = new javax.swing.JLabel();
         lv = new javax.swing.JLabel();
@@ -83,13 +83,20 @@ public class CarDisplay extends javax.swing.JPanel {
         LabelListPrice.setText("Price");
         LabelListPrice.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(36, 96, 156), 1, true));
 
-        jButton1.setBackground(new java.awt.Color(102, 153, 0));
-        jButton1.setForeground(new java.awt.Color(102, 153, 0));
-        jButton1.setText("jButton1");
+        ButtonEdit.setBackground(new java.awt.Color(135, 137, 144));
+        ButtonEdit.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonEdit.setText("Edit");
+        ButtonEdit.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ButtonEdit.setMinimumSize(new java.awt.Dimension(11, 11));
+        ButtonEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonEditActionPerformed(evt);
+            }
+        });
 
-        ButtonDelete.setBackground(new java.awt.Color(204, 0, 0));
-        ButtonDelete.setForeground(new java.awt.Color(204, 0, 0));
-        ButtonDelete.setText("jButton1");
+        ButtonDelete.setBackground(new java.awt.Color(230, 73, 73));
+        ButtonDelete.setForeground(new java.awt.Color(255, 255, 255));
+        ButtonDelete.setText("Delete");
         ButtonDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ButtonDeleteActionPerformed(evt);
@@ -119,27 +126,27 @@ public class CarDisplay extends javax.swing.JPanel {
                                 .addComponent(LabelListMileage)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(km)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(LabelListPhone)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
                                 .addComponent(LabelListPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(LabelListBrand)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(LabelListModel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 165, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(ButtonEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(3, 3, 3)
-                                .addComponent(ButtonDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lv)))))
-                .addContainerGap())
+                                .addComponent(lv)
+                                .addGap(52, 52, 52))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(ButtonDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -161,9 +168,9 @@ public class CarDisplay extends javax.swing.JPanel {
                                     .addComponent(LabelListMileage)
                                     .addComponent(km)))
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(ButtonDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                                .addComponent(ButtonEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(ButtonDelete)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(LabelListPhone, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -184,9 +191,16 @@ public class CarDisplay extends javax.swing.JPanel {
          }
     }//GEN-LAST:event_ButtonDeleteActionPerformed
 
+    private void ButtonEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonEditActionPerformed
+        if(evt.getSource()==ButtonEdit){
+       
+        }
+    }//GEN-LAST:event_ButtonEditActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ButtonDelete;
+    private javax.swing.JButton ButtonEdit;
     private javax.swing.JLabel LabelListBrand;
     private javax.swing.JLabel LabelListColor;
     private javax.swing.JLabel LabelListMileage;
@@ -195,7 +209,6 @@ public class CarDisplay extends javax.swing.JPanel {
     private javax.swing.JLabel LabelListPic;
     private javax.swing.JLabel LabelListPrice;
     private javax.swing.JLabel LabelListYear;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel km;
     private javax.swing.JLabel lv;
     // End of variables declaration//GEN-END:variables
