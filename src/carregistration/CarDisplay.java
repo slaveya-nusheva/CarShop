@@ -18,10 +18,14 @@ import javax.swing.JLabel;
  */
 public class CarDisplay extends javax.swing.JPanel {
 
+    CarShop carShopFrame;
+    Car currentcar;
     /**
      * Creates new form CarDisplay
      */
-    public CarDisplay(JFrame parent, Car car) {
+    public CarDisplay(CarShop carShopFrame, Car car) {
+        this.carShopFrame = carShopFrame;
+        this.currentcar = car;
         initComponents();
        Path resourceDirectory = Paths.get("src","resources");
         String absolutePath = resourceDirectory.toFile().getAbsolutePath();
@@ -147,7 +151,7 @@ public class CarDisplay extends javax.swing.JPanel {
                                 .addComponent(LabelListBrand)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(LabelListModel)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(LabelListPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -206,13 +210,15 @@ public class CarDisplay extends javax.swing.JPanel {
     }//GEN-LAST:event_ButtonDeleteActionPerformed
 
     private void ButtonEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonEditActionPerformed
-     
+        if(evt.getSource()==ButtonEdit){
+        carShopFrame.fillInCarEditMode(currentcar);
+        carShopFrame.getSellPanel().setVisible(true);
+        carShopFrame.getBuyPanel().setVisible(false);
+        }
     }//GEN-LAST:event_ButtonEditActionPerformed
 
     private void ButtonEditMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ButtonEditMouseClicked
-          if(evt.getSource()==ButtonEdit){
-            
-        }
+  
     }//GEN-LAST:event_ButtonEditMouseClicked
 
 
