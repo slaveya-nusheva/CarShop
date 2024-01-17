@@ -12,6 +12,7 @@ import java.awt.image.BufferedImage;
  * @author smgOP682
  */
 public class Car {
+    private int id;
     private String brand;
     private String model;
     private int year;
@@ -24,6 +25,14 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" + "brand=" + brand + ", model=" + model + ", year=" + year + ", color=" + color + ", mileage=" + mileage + ", price=" + price + ", phone=" + phone + '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
   
