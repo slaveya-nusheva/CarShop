@@ -22,6 +22,7 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
 /**
  *
@@ -260,7 +261,7 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
                         .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
                         .addComponent(jLabel1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -535,6 +536,27 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JPanel listPanel;
     // End of variables declaration//GEN-END:variables
 
+    public void fillInCarEditMode(Car car){
+        Path resourceDirectory = Paths.get("src","resources");
+        String absolutePath = resourceDirectory.toFile().getAbsolutePath();
+        
+            TextFieldBrand.setText(car.getBrandr());
+            TextFieldModel.setText(car.getModel());
+            TextFieldYear.setText(String.valueOf(car.getYear()));
+            TextFieldColor.setText(car.getColor());
+            TextFieldMileage.setText(String.valueOf(car.getMileage()));
+            TextFieldPrice.setText(String.valueOf(car.getPrice()));
+            TextFieldPhone.setText(car.getPhone());
+            LabelCarImage.setIcon(new ImageIcon(absolutePath+"/"+car.getImageName()));
+            jLabel1.setText(car.getImageName());
+    }
+    public JPanel getSellPanel(){
+        return SellPanel;
+    }
+    public JScrollPane getBuyPanel(){
+        return BuyPanel;
+    }
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
