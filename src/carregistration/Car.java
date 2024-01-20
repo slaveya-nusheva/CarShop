@@ -5,7 +5,6 @@
  */
 package carregistration;
 
-import java.awt.image.BufferedImage;
 
 /**
  *
