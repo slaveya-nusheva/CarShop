@@ -5,7 +5,7 @@
  */
 package carregistration;
 
-import java.awt.LayoutManager;
+
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import javax.swing.ImageIcon;
