@@ -5,6 +5,7 @@
  */
 package carregistration;
 
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -154,6 +155,8 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
             }
         });
 
+        LabelCarImage.setMaximumSize(new java.awt.Dimension(157, 92));
+
         jLabel1.setForeground(new java.awt.Color(175, 214, 236));
 
         ButtonCancel.setBackground(new java.awt.Color(230, 73, 73));
@@ -189,33 +192,35 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
                             .addComponent(LabelPrice, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(LabelPhone, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(LabelPhoto, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(SellPanelLayout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(19, 19, 19)
+                                .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(SellPanelLayout.createSequentialGroup()
-                                        .addGap(267, 267, 267)
-                                        .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SellPanelLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGap(17, 17, 17)
                                         .addComponent(jLabel1)
-                                        .addGap(94, 94, 94))))
-                            .addComponent(TextFieldPhone, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextFieldPrice, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextFieldMileage, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextFieldColor, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextFieldYear, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextFieldModel, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(TextFieldBrand, javax.swing.GroupLayout.Alignment.LEADING)))
+                                        .addGap(94, 94, 94))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SellPanelLayout.createSequentialGroup()
+                                        .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(24, 24, 24))))
+                            .addGroup(SellPanelLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(TextFieldPrice, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 533, Short.MAX_VALUE)
+                                    .addComponent(TextFieldMileage, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(TextFieldColor, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(TextFieldYear, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(TextFieldModel, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(TextFieldBrand, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(TextFieldPhone)))))
                     .addGroup(SellPanelLayout.createSequentialGroup()
                         .addComponent(ButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)))
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         SellPanelLayout.setVerticalGroup(
             SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -262,8 +267,8 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
                         .addComponent(ButtonAttach, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
                         .addComponent(jLabel1))
-                    .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LabelCarImage, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 17, Short.MAX_VALUE)
                 .addGroup(SellPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -355,84 +360,6 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAddActionPerformed
-        if(evt.getSource()==ButtonAdd){
-
-            Car c = new Car();
-            if(ButtonAdd.getText().equals("Add"))
-                c.setId((int)Math.random());
-            
-            c.setBrand(TextFieldBrand.getText());
-            c.setModel(TextFieldModel.getText());
-            c.setYear(Integer.valueOf(TextFieldYear.getText()));
-            c.setColor(TextFieldColor.getText());
-            c.setMileage(Double.valueOf(TextFieldMileage.getText()));
-            c.setPrice(Double.valueOf(TextFieldPrice.getText()));
-            c.setPhone(TextFieldPhone.getText());
-            c.setImageName(jLabel1.getText());
-            
-
-            if(ButtonAdd.getText().equals("Add")){
-                cars.add(c);
-                //append file
-            }else 
-                for(Car car:cars){
-                    if(car.getId()==c.getId()){
-                        cars.remove(car);
-                        cars.add(c);
-                    }
-                }
-           // System.out.println(c.toString());
-           
-           TextFieldBrand.setText(null);
-            TextFieldModel.setText(null);
-            TextFieldYear.setText(null);
-            TextFieldColor.setText(null);
-            TextFieldMileage.setText(null);
-            TextFieldPrice.setText(null);
-            TextFieldPhone.setText(null);
-            jLabel1.setText(null);
-           LabelCarImage.setIcon(null);
-        }
-        
-       
-    }//GEN-LAST:event_ButtonAddActionPerformed
-
-    private void TextFieldPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldPhoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextFieldPhoneActionPerformed
-
-    private void TextFieldYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldYearActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TextFieldYearActionPerformed
-
-    private void ButtonAttachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAttachActionPerformed
-       JFileChooser fileChooser = new JFileChooser();
-       fileChooser.addChoosableFileFilter(new ImageFilter());
-       fileChooser.setAcceptAllFileFilterUsed(false);
-
-       int option = fileChooser.showOpenDialog(this);
-       if(option == JFileChooser.APPROVE_OPTION){
-          File file = fileChooser.getSelectedFile();
-          try {               
-               Path resourceDirectory = Paths.get("src","resources");
-               String absolutePath = resourceDirectory.toFile().getAbsolutePath();
-              
-               FileChannel src = new FileInputStream(file).getChannel();
-               FileChannel dest = new FileOutputStream(new File(absolutePath+"/"+file.getName())).getChannel();
-               dest.transferFrom(src, 0, src.size());
-               src.close();
-               dest.close();
-               ImageIcon imgIcon = new ImageIcon(absolutePath+"/"+file.getName());
-               LabelCarImage.setIcon(imgIcon);
-               LabelCarImage.setSize(imgIcon.getIconWidth(), imgIcon.getIconHeight());
-               jLabel1.setText(file.getName());
-           } catch (Exception ex) {
-               // TODO Auto-generated catch block
-               ex.printStackTrace();
-           }}
-    }//GEN-LAST:event_ButtonAttachActionPerformed
-
     private void MenuBuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuBuyActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_MenuBuyActionPerformed
@@ -464,7 +391,7 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
     }//GEN-LAST:event_MenuSellMouseClicked
 
     private void ButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCancelActionPerformed
-         if(evt.getSource()==ButtonCancel){
+        if(evt.getSource()==ButtonCancel){
 
             TextFieldBrand.setText(null);
             TextFieldModel.setText(null);
@@ -475,8 +402,84 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
             TextFieldPhone.setText(null);
             jLabel1.setText(null);
             LabelCarImage.setIcon(null);
-         }
+        }
     }//GEN-LAST:event_ButtonCancelActionPerformed
+
+    private void ButtonAttachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAttachActionPerformed
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.addChoosableFileFilter(new ImageFilter());
+        fileChooser.setAcceptAllFileFilterUsed(false);
+
+        int option = fileChooser.showOpenDialog(this);
+        if(option == JFileChooser.APPROVE_OPTION){
+            File file = fileChooser.getSelectedFile();
+            try {
+                Path resourceDirectory = Paths.get("src","resources");
+                String absolutePath = resourceDirectory.toFile().getAbsolutePath();
+
+                FileChannel src = new FileInputStream(file).getChannel();
+                FileChannel dest = new FileOutputStream(new File(absolutePath+"/"+file.getName())).getChannel();
+                dest.transferFrom(src, 0, src.size());
+                src.close();
+                dest.close();
+                ImageIcon imgIcon = new ImageIcon(absolutePath+"/"+file.getName());
+                LabelCarImage.setIcon(imgIcon);
+                LabelCarImage.setSize(imgIcon.getIconWidth(), imgIcon.getIconHeight());
+                jLabel1.setText(file.getName());
+            } catch (Exception ex) {
+                // TODO Auto-generated catch block
+                ex.printStackTrace();
+            }}
+    }//GEN-LAST:event_ButtonAttachActionPerformed
+
+    private void ButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAddActionPerformed
+        if(evt.getSource()==ButtonAdd){
+
+            Car c = new Car();
+            if(ButtonAdd.getText().equals("Add"))
+            c.setId((int)Math.random());
+
+            c.setBrand(TextFieldBrand.getText());
+            c.setModel(TextFieldModel.getText());
+            c.setYear(Integer.valueOf(TextFieldYear.getText()));
+            c.setColor(TextFieldColor.getText());
+            c.setMileage(Double.valueOf(TextFieldMileage.getText()));
+            c.setPrice(Double.valueOf(TextFieldPrice.getText()));
+            c.setPhone(TextFieldPhone.getText());
+            c.setImageName(jLabel1.getText());
+
+            if(ButtonAdd.getText().equals("Add")){
+                cars.add(c);
+                //append file
+            }else
+            for(Car car:cars){
+                if(car.getId()==c.getId()){
+                    cars.remove(car);
+                    cars.add(c);
+                }
+            }
+            // System.out.println(c.toString());
+
+            TextFieldBrand.setText(null);
+            TextFieldModel.setText(null);
+            TextFieldYear.setText(null);
+            TextFieldColor.setText(null);
+            TextFieldMileage.setText(null);
+            TextFieldPrice.setText(null);
+            TextFieldPhone.setText(null);
+            jLabel1.setText(null);
+            LabelCarImage.setIcon(null);
+        }
+
+    }//GEN-LAST:event_ButtonAddActionPerformed
+
+    private void TextFieldPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldPhoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldPhoneActionPerformed
+
+    private void TextFieldYearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldYearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextFieldYearActionPerformed
 
     private void TextFieldBrandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextFieldBrandActionPerformed
         // TODO add your handling code here:

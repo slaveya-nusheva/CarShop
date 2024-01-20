@@ -125,31 +125,35 @@
                               <Component id="LabelPhone" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Component id="LabelPhoto" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                                  <Component id="LabelCarImage" min="-2" pref="165" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                  <Component id="LabelCarImage" min="-2" pref="157" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <EmptySpace min="-2" pref="267" max="-2" attributes="0"/>
-                                          <Component id="ButtonAttach" min="-2" pref="87" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
                                       </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="ButtonAttach" min="-2" pref="87" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
-                              <Component id="TextFieldPhone" alignment="0" max="32767" attributes="0"/>
-                              <Component id="TextFieldPrice" alignment="0" max="32767" attributes="0"/>
-                              <Component id="TextFieldMileage" alignment="0" max="32767" attributes="0"/>
-                              <Component id="TextFieldColor" alignment="0" max="32767" attributes="0"/>
-                              <Component id="TextFieldYear" alignment="0" max="32767" attributes="0"/>
-                              <Component id="TextFieldModel" alignment="0" max="32767" attributes="0"/>
-                              <Component id="TextFieldBrand" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="TextFieldPrice" alignment="0" pref="533" max="32767" attributes="0"/>
+                                      <Component id="TextFieldMileage" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TextFieldColor" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TextFieldYear" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TextFieldModel" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TextFieldBrand" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="TextFieldPhone" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
@@ -159,7 +163,7 @@
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="11" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -221,9 +225,9 @@
                           <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="LabelCarImage" min="-2" pref="103" max="-2" attributes="0"/>
+                      <Component id="LabelCarImage" min="-2" pref="92" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="17" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="ButtonAdd" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
                       <Component id="ButtonCancel" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
@@ -359,6 +363,14 @@
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="LabelCarImage">
+          <Properties>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[157, 92]"/>
+            </Property>
+            <Property name="mixingCutoutShape" type="java.awt.Shape" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="default"/>
+            </Property>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
