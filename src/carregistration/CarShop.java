@@ -76,6 +76,17 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
         ButtonCancel = new javax.swing.JButton();
         BuyPanel = new javax.swing.JScrollPane();
         listPanel = new javax.swing.JPanel();
+        AboutUsPanel = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        AutohousesPanel = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         MenuBar = new javax.swing.JMenuBar();
         MenuBuy = new javax.swing.JMenu();
         MenuSell = new javax.swing.JMenu();
@@ -300,6 +311,111 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
 
         BuyPanel.setViewportView(listPanel);
 
+        AboutUsPanel.setBackground(new java.awt.Color(175, 214, 236));
+        AboutUsPanel.setMaximumSize(new java.awt.Dimension(610, 511));
+        AboutUsPanel.setPreferredSize(new java.awt.Dimension(610, 511));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/pople.jpeg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Screenshot 2024-01-20 at 8.50.29.png"))); // NOI18N
+
+        jLabel3.setFont(new java.awt.Font("Hiragino Sans", 0, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(24, 46, 113));
+        jLabel3.setText("We are Slaveya Nusheva and Nikolay Marinski - ");
+
+        jLabel5.setFont(new java.awt.Font("Hiragino Sans", 1, 13)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(24, 46, 113));
+        jLabel5.setText("the CEO’s of The Engine Room.");
+
+        jLabel6.setFont(new java.awt.Font("Hiragino Sans", 0, 13)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(24, 46, 113));
+        jLabel6.setText("We started our business 5 years ago as a project and now we are the");
+
+        jLabel7.setFont(new java.awt.Font("Hiragino Sans", 0, 13)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(24, 46, 113));
+        jLabel7.setText("biggest and most trustworthy auto shop.");
+
+        jLabel8.setFont(new java.awt.Font("Hiragino Sans", 0, 13)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(24, 46, 113));
+        jLabel8.setText("If you are looking for a new car, you are in the right place.");
+
+        javax.swing.GroupLayout AboutUsPanelLayout = new javax.swing.GroupLayout(AboutUsPanel);
+        AboutUsPanel.setLayout(AboutUsPanelLayout);
+        AboutUsPanelLayout.setHorizontalGroup(
+            AboutUsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AboutUsPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(AboutUsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AboutUsPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 553, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AboutUsPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(158, 158, 158))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AboutUsPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(207, 207, 207))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AboutUsPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(84, 84, 84))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AboutUsPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(183, 183, 183))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AboutUsPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(126, 126, 126))))
+        );
+        AboutUsPanelLayout.setVerticalGroup(
+            AboutUsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AboutUsPanelLayout.createSequentialGroup()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addGap(0, 0, 0)
+                .addComponent(jLabel5)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addGap(0, 0, 0)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12))
+        );
+
+        AutohousesPanel.setBackground(new java.awt.Color(175, 214, 236));
+        AutohousesPanel.setMaximumSize(new java.awt.Dimension(610, 511));
+        AutohousesPanel.setPreferredSize(new java.awt.Dimension(610, 511));
+
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/map.png"))); // NOI18N
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Screenshot 2024-01-20 at 8.50.29.png"))); // NOI18N
+
+        javax.swing.GroupLayout AutohousesPanelLayout = new javax.swing.GroupLayout(AutohousesPanel);
+        AutohousesPanel.setLayout(AutohousesPanelLayout);
+        AutohousesPanelLayout.setHorizontalGroup(
+            AutohousesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AutohousesPanelLayout.createSequentialGroup()
+                .addComponent(jLabel10)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(AutohousesPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        AutohousesPanelLayout.setVerticalGroup(
+            AutohousesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AutohousesPanelLayout.createSequentialGroup()
+                .addComponent(jLabel10)
+                .addGap(38, 38, 38)
+                .addComponent(jLabel9)
+                .addGap(22, 22, 22))
+        );
+
         MenuBuy.setText("Buy a Car");
         MenuBuy.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -327,9 +443,19 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
         MenuBar.add(MenuSell);
 
         MenuInfo.setText("About Us");
+        MenuInfo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MenuInfoMouseClicked(evt);
+            }
+        });
         MenuBar.add(MenuInfo);
 
         MenuAutohouses.setText("Autohouses");
+        MenuAutohouses.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MenuAutohousesMouseClicked(evt);
+            }
+        });
         MenuBar.add(MenuAutohouses);
 
         setJMenuBar(MenuBar);
@@ -346,6 +472,16 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
                     .addGap(1, 1, 1)
                     .addComponent(BuyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGap(1, 1, 1)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(AboutUsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(AutohousesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -355,6 +491,16 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
                     .addContainerGap()
                     .addComponent(BuyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(AboutUsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(AutohousesPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -383,11 +529,15 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
         BuyPanel.setViewportView(listPanel);
         BuyPanel.setVisible(true);
        SellPanel.setVisible(false);
+       AboutUsPanel.setVisible(false);
+       AutohousesPanel.setVisible(false);
     }//GEN-LAST:event_MenuBuyMouseClicked
 
     private void MenuSellMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuSellMouseClicked
          BuyPanel.setVisible(false);
        SellPanel.setVisible(true);
+       AboutUsPanel.setVisible(false);
+       AutohousesPanel.setVisible(false);
     }//GEN-LAST:event_MenuSellMouseClicked
 
     private void ButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonCancelActionPerformed
@@ -485,6 +635,20 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
         // TODO add your handling code here:
     }//GEN-LAST:event_TextFieldBrandActionPerformed
 
+    private void MenuInfoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuInfoMouseClicked
+        BuyPanel.setVisible(false);
+       SellPanel.setVisible(false);
+       AboutUsPanel.setVisible(true);
+       AutohousesPanel.setVisible(false);
+    }//GEN-LAST:event_MenuInfoMouseClicked
+
+    private void MenuAutohousesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuAutohousesMouseClicked
+        BuyPanel.setVisible(false);
+       SellPanel.setVisible(false);
+       AboutUsPanel.setVisible(false);
+       AutohousesPanel.setVisible(true);
+    }//GEN-LAST:event_MenuAutohousesMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -522,6 +686,8 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel AboutUsPanel;
+    private javax.swing.JPanel AutohousesPanel;
     private javax.swing.JButton ButtonAdd;
     private javax.swing.JButton ButtonAttach;
     private javax.swing.JButton ButtonCancel;
@@ -551,6 +717,15 @@ public class CarShop extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JTextField TextFieldYear;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel listPanel;
     // End of variables declaration//GEN-END:variables
 
